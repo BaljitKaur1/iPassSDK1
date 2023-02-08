@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.requires_arc = true
   s.swift_version = '5.0'
-  s.source_files = 'iPassSDK1/Sources/ApiStore.swift'
+  s.source_files = 'iPassSDK1/Sources/Apis.swift'
 end
