@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		4092968129927371000C3F1B /* iPassSDK1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092968029927371000C3F1B /* iPassSDK1.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40929689299273C9000C3F1B /* ApiStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40929688299273C9000C3F1B /* ApiStore.swift */; };
+		7579017C2993E975005DC220 /* Apis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7579017B2993E975005DC220 /* Apis.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4092967D29927371000C3F1B /* iPassSDK1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPassSDK1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4092968029927371000C3F1B /* iPassSDK1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPassSDK1.h; sourceTree = "<group>"; };
 		40929688299273C9000C3F1B /* ApiStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiStore.swift; sourceTree = "<group>"; };
+		7579017B2993E975005DC220 /* Apis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apis.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				40929688299273C9000C3F1B /* ApiStore.swift */,
+				7579017B2993E975005DC220 /* Apis.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7579017C2993E975005DC220 /* Apis.swift in Sources */,
 				40929689299273C9000C3F1B /* ApiStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
