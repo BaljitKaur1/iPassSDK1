@@ -7,11 +7,15 @@
 
 import UIKit
 
-class Apis: NSObject {
+open class Apis: NSObject {
     
-    static let shared = Apis()
+    fileprivate struct Constants {
+        static let shared = Apis()
+    }
     
-    func testDemo() {
+    
+    
+    open func testDemo() {
         print("=-=-=-===")
     }
 }
