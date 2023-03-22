@@ -29,6 +29,7 @@ open class Apis: NSObject {
             }
     }
     
+    /*
     // Mark: - 1 .
     func initJWTToken(first_name: String,last_name:String,password:String,email:String,token:String, completion: @escaping(_ : JWTToken? , ErrorBase?) -> Void) {
         let params : [String: String] = [
@@ -322,4 +323,6 @@ open class Apis: NSObject {
             
         }
     }
+     
+     */
 }
