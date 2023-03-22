@@ -9,6 +9,26 @@
 /* Begin PBXBuildFile section */
 		1C98B28D3290193FF1A90F61 /* Pods_iPassSDK1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA996C16DDC21E9F7855919 /* Pods_iPassSDK1.framework */; };
 		4092968129927371000C3F1B /* iPassSDK1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092968029927371000C3F1B /* iPassSDK1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40D2A52329CB085E00339E92 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52029CB085E00339E92 /* WebServices.swift */; };
+		40D2A52429CB085E00339E92 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52129CB085E00339E92 /* Reachability.swift */; };
+		40D2A52529CB085E00339E92 /* ApiStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52229CB085E00339E92 /* ApiStore.swift */; };
+		40D2A52E29CB08BE00339E92 /* KYCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52A29CB08BE00339E92 /* KYCModel.swift */; };
+		40D2A52F29CB08BE00339E92 /* ErrorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52B29CB08BE00339E92 /* ErrorBase.swift */; };
+		40D2A53029CB08BE00339E92 /* KYCPUTPrepareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52C29CB08BE00339E92 /* KYCPUTPrepareData.swift */; };
+		40D2A53129CB08BE00339E92 /* KYCPrePareDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52D29CB08BE00339E92 /* KYCPrePareDataModel.swift */; };
+		40D2A53529CB08DD00339E92 /* PostIDCardFrontModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A53229CB08DD00339E92 /* PostIDCardFrontModel.swift */; };
+		40D2A53629CB08DD00339E92 /* PassPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A53329CB08DD00339E92 /* PassPostModel.swift */; };
+		40D2A53729CB08DD00339E92 /* DrivingPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A53429CB08DD00339E92 /* DrivingPostModel.swift */; };
+		40D2A53A29CB08F700339E92 /* SMEmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A53829CB08F700339E92 /* SMEmailModel.swift */; };
+		40D2A53B29CB08F700339E92 /* SMPhoneModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A53929CB08F700339E92 /* SMPhoneModel.swift */; };
+		40D2A54529CB0AD400339E92 /* DeleteAccountDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A53D29CB0AD400339E92 /* DeleteAccountDataModel.swift */; };
+		40D2A54629CB0AD400339E92 /* UserDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A53E29CB0AD400339E92 /* UserDetailModel.swift */; };
+		40D2A54729CB0AD400339E92 /* JWTToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A53F29CB0AD400339E92 /* JWTToken.swift */; };
+		40D2A54829CB0AD400339E92 /* UserStatusError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A54029CB0AD400339E92 /* UserStatusError.swift */; };
+		40D2A54929CB0AD400339E92 /* UserDetailError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A54129CB0AD400339E92 /* UserDetailError.swift */; };
+		40D2A54A29CB0AD400339E92 /* FrontImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A54229CB0AD400339E92 /* FrontImageData.swift */; };
+		40D2A54B29CB0AD400339E92 /* AccountTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A54329CB0AD400339E92 /* AccountTokenModel.swift */; };
+		40D2A54C29CB0AD400339E92 /* WorkFlowStatrusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A54429CB0AD400339E92 /* WorkFlowStatrusModel.swift */; };
 		7579017C2993E975005DC220 /* Apis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7579017B2993E975005DC220 /* Apis.swift */; };
 /* End PBXBuildFile section */
 
@@ -17,6 +37,26 @@
 		1EA996C16DDC21E9F7855919 /* Pods_iPassSDK1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPassSDK1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4092967D29927371000C3F1B /* iPassSDK1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPassSDK1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4092968029927371000C3F1B /* iPassSDK1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPassSDK1.h; sourceTree = "<group>"; };
+		40D2A52029CB085E00339E92 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		40D2A52129CB085E00339E92 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		40D2A52229CB085E00339E92 /* ApiStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiStore.swift; sourceTree = "<group>"; };
+		40D2A52A29CB08BE00339E92 /* KYCModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCModel.swift; sourceTree = "<group>"; };
+		40D2A52B29CB08BE00339E92 /* ErrorBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorBase.swift; sourceTree = "<group>"; };
+		40D2A52C29CB08BE00339E92 /* KYCPUTPrepareData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCPUTPrepareData.swift; sourceTree = "<group>"; };
+		40D2A52D29CB08BE00339E92 /* KYCPrePareDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCPrePareDataModel.swift; sourceTree = "<group>"; };
+		40D2A53229CB08DD00339E92 /* PostIDCardFrontModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIDCardFrontModel.swift; sourceTree = "<group>"; };
+		40D2A53329CB08DD00339E92 /* PassPostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassPostModel.swift; sourceTree = "<group>"; };
+		40D2A53429CB08DD00339E92 /* DrivingPostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrivingPostModel.swift; sourceTree = "<group>"; };
+		40D2A53829CB08F700339E92 /* SMEmailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMEmailModel.swift; sourceTree = "<group>"; };
+		40D2A53929CB08F700339E92 /* SMPhoneModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMPhoneModel.swift; sourceTree = "<group>"; };
+		40D2A53D29CB0AD400339E92 /* DeleteAccountDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteAccountDataModel.swift; sourceTree = "<group>"; };
+		40D2A53E29CB0AD400339E92 /* UserDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailModel.swift; sourceTree = "<group>"; };
+		40D2A53F29CB0AD400339E92 /* JWTToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWTToken.swift; sourceTree = "<group>"; };
+		40D2A54029CB0AD400339E92 /* UserStatusError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStatusError.swift; sourceTree = "<group>"; };
+		40D2A54129CB0AD400339E92 /* UserDetailError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailError.swift; sourceTree = "<group>"; };
+		40D2A54229CB0AD400339E92 /* FrontImageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontImageData.swift; sourceTree = "<group>"; };
+		40D2A54329CB0AD400339E92 /* AccountTokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTokenModel.swift; sourceTree = "<group>"; };
+		40D2A54429CB0AD400339E92 /* WorkFlowStatrusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkFlowStatrusModel.swift; sourceTree = "<group>"; };
 		6A936CC461C5FDB443643004 /* Pods-iPassSDK1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassSDK1.debug.xcconfig"; path = "Target Support Files/Pods-iPassSDK1/Pods-iPassSDK1.debug.xcconfig"; sourceTree = "<group>"; };
 		7579017B2993E975005DC220 /* Apis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apis.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +94,8 @@
 		4092967F29927371000C3F1B /* iPassSDK1 */ = {
 			isa = PBXGroup;
 			children = (
+				40D2A52629CB088400339E92 /* Model */,
+				40D2A51F29CB081700339E92 /* APIManager */,
 				4092968729927378000C3F1B /* Sources */,
 				4092968029927371000C3F1B /* iPassSDK1.h */,
 			);
@@ -66,6 +108,72 @@
 				7579017B2993E975005DC220 /* Apis.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		40D2A51F29CB081700339E92 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				40D2A52229CB085E00339E92 /* ApiStore.swift */,
+				40D2A52129CB085E00339E92 /* Reachability.swift */,
+				40D2A52029CB085E00339E92 /* WebServices.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		40D2A52629CB088400339E92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40D2A53C29CB090900339E92 /* iPass */,
+				40D2A52929CB089C00339E92 /* SocialMedia */,
+				40D2A52829CB089500339E92 /* PostData */,
+				40D2A52729CB088E00339E92 /* KYC */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		40D2A52729CB088E00339E92 /* KYC */ = {
+			isa = PBXGroup;
+			children = (
+				40D2A52B29CB08BE00339E92 /* ErrorBase.swift */,
+				40D2A52A29CB08BE00339E92 /* KYCModel.swift */,
+				40D2A52D29CB08BE00339E92 /* KYCPrePareDataModel.swift */,
+				40D2A52C29CB08BE00339E92 /* KYCPUTPrepareData.swift */,
+			);
+			path = KYC;
+			sourceTree = "<group>";
+		};
+		40D2A52829CB089500339E92 /* PostData */ = {
+			isa = PBXGroup;
+			children = (
+				40D2A53429CB08DD00339E92 /* DrivingPostModel.swift */,
+				40D2A53329CB08DD00339E92 /* PassPostModel.swift */,
+				40D2A53229CB08DD00339E92 /* PostIDCardFrontModel.swift */,
+			);
+			path = PostData;
+			sourceTree = "<group>";
+		};
+		40D2A52929CB089C00339E92 /* SocialMedia */ = {
+			isa = PBXGroup;
+			children = (
+				40D2A53829CB08F700339E92 /* SMEmailModel.swift */,
+				40D2A53929CB08F700339E92 /* SMPhoneModel.swift */,
+			);
+			path = SocialMedia;
+			sourceTree = "<group>";
+		};
+		40D2A53C29CB090900339E92 /* iPass */ = {
+			isa = PBXGroup;
+			children = (
+				40D2A54329CB0AD400339E92 /* AccountTokenModel.swift */,
+				40D2A53D29CB0AD400339E92 /* DeleteAccountDataModel.swift */,
+				40D2A54229CB0AD400339E92 /* FrontImageData.swift */,
+				40D2A53F29CB0AD400339E92 /* JWTToken.swift */,
+				40D2A54129CB0AD400339E92 /* UserDetailError.swift */,
+				40D2A53E29CB0AD400339E92 /* UserDetailModel.swift */,
+				40D2A54029CB0AD400339E92 /* UserStatusError.swift */,
+				40D2A54429CB0AD400339E92 /* WorkFlowStatrusModel.swift */,
+			);
+			path = iPass;
 			sourceTree = "<group>";
 		};
 		89974B9D90D2CA8EBF19894E /* Pods */ = {
@@ -191,7 +299,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40D2A54A29CB0AD400339E92 /* FrontImageData.swift in Sources */,
+				40D2A52529CB085E00339E92 /* ApiStore.swift in Sources */,
+				40D2A52F29CB08BE00339E92 /* ErrorBase.swift in Sources */,
+				40D2A53629CB08DD00339E92 /* PassPostModel.swift in Sources */,
+				40D2A52E29CB08BE00339E92 /* KYCModel.swift in Sources */,
+				40D2A52329CB085E00339E92 /* WebServices.swift in Sources */,
 				7579017C2993E975005DC220 /* Apis.swift in Sources */,
+				40D2A53B29CB08F700339E92 /* SMPhoneModel.swift in Sources */,
+				40D2A54629CB0AD400339E92 /* UserDetailModel.swift in Sources */,
+				40D2A54B29CB0AD400339E92 /* AccountTokenModel.swift in Sources */,
+				40D2A53529CB08DD00339E92 /* PostIDCardFrontModel.swift in Sources */,
+				40D2A54529CB0AD400339E92 /* DeleteAccountDataModel.swift in Sources */,
+				40D2A54C29CB0AD400339E92 /* WorkFlowStatrusModel.swift in Sources */,
+				40D2A54829CB0AD400339E92 /* UserStatusError.swift in Sources */,
+				40D2A53129CB08BE00339E92 /* KYCPrePareDataModel.swift in Sources */,
+				40D2A54929CB0AD400339E92 /* UserDetailError.swift in Sources */,
+				40D2A53729CB08DD00339E92 /* DrivingPostModel.swift in Sources */,
+				40D2A52429CB085E00339E92 /* Reachability.swift in Sources */,
+				40D2A53A29CB08F700339E92 /* SMEmailModel.swift in Sources */,
+				40D2A53029CB08BE00339E92 /* KYCPUTPrepareData.swift in Sources */,
+				40D2A54729CB0AD400339E92 /* JWTToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
