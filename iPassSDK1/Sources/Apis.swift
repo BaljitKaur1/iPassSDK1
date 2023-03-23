@@ -15,19 +15,21 @@ open class Apis: NSObject {
         print("=-=-=-===testDemo")
     }
     
-    open func getAlamofire() {
-        AF.request("https://mbd.cookcountysupernetwork.com/ap/swift_math_get.asp", method: .post,  parameters: nil, encoding: JSONEncoding.default)
-            .responseJSON { response in
-                switch response.result {
-                case .success(let value):
-                    if let json = value as? [String: Any] {
-                        print(json["Result"] as? Int as Any)
-                    }
-                case .failure(let error):
-                    print(error)
-                }
-            }
-    }
+    var baseUrl = ""
+    
+//    open func getAlamofire() {
+//        AF.request("https://mbd.cookcountysupernetwork.com/ap/swift_math_get.asp", method: .post,  parameters: nil, encoding: JSONEncoding.default)
+//            .responseJSON { response in
+//                switch response.result {
+//                case .success(let value):
+//                    if let json = value as? [String: Any] {
+//                        print(json["Result"] as? Int as Any)
+//                    }
+//                case .failure(let error):
+//                    print(error)
+//                }
+//            }
+//    }
     
     
     // Mark: - 1 .
@@ -298,21 +300,21 @@ open class Apis: NSObject {
         }
         
         ////Mark :-18-23  Uploaded Document Data
-        func getDataOfType(token:String,jwtToken:String,apimId:String,documentType:String ,completion : @escaping(_ : [String : Any]?)->Void){
-            var baseUrl = ""
+        func getDataOfType(token:String,jwtToken:String,apimId:String,documentType:String ,completion : @escaping(_ : [String : Any]?)->Void){ 
+            
             switch(documentType){
             case "Passport":
-                baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.passportGetData.rawValue +  token + "&apimId=\(apimId)"
+                self.baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.passportGetData.rawValue +  token + "&apimId=\(apimId)"
             case "DrivingLicence":
-                baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.drivingGetData.rawValue +  token + "&apimId=\(apimId)"
+                self.baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.drivingGetData.rawValue +  token + "&apimId=\(apimId)"
             case "FrontIDCard":
-                baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.idCardGetFRNTData.rawValue +  token + "&apimId=\(apimId)"
+                self.baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.idCardGetFRNTData.rawValue +  token + "&apimId=\(apimId)"
             case "BackIDCard":
-                baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.idCardGetBackData.rawValue +  token + "&apimId=\(apimId)"
+                self.baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.idCardGetBackData.rawValue +  token + "&apimId=\(apimId)"
             case "Document":
-                baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.documentGetData.rawValue +  token + "&apimId=\(apimId)"
+                self.baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.documentGetData.rawValue +  token + "&apimId=\(apimId)"
             default:
-                baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.documentGetData.rawValue +  token + "&apimId=\(apimId)"
+                self.baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.documentGetData.rawValue +  token + "&apimId=\(apimId)"
             }
             
             let baseUrl1 = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpoint.rawValue + Endpoints.idCardGetBackData.rawValue +  token + "&apimId=\(apimId)"
