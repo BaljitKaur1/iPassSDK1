@@ -8,7 +8,7 @@
 import Foundation
 
 public struct ErrorBase: Codable {
-    let user: ErrorData?
+    public let user: ErrorData?
     let jwtError : JWTError?
 }
 
@@ -16,7 +16,7 @@ public struct ErrorBase: Codable {
 public struct ErrorData: Codable {
     let title: String?
     let status: Int?
-    let detail: String?
+    public let detail: String?
 }
 public struct JWTError: Codable {
     let bdy: Bdy?
