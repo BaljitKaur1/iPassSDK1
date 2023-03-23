@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = 'iPassSDK1'
   s.module_name = 'iPassSDK1'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.license = 'LICENSE'
   s.summary = 'Elegant HTTP Networking in Swift'
   s.homepage = 'https://github.com/BaljitKaur1/iPassSDK1.git'
