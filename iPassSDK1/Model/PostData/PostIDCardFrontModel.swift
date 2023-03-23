@@ -2,30 +2,30 @@
 import Foundation
 
 // MARK: - IDCardFrontModel
-struct PostIDCardFrontModel: Codable {
+public struct PostIDCardFrontModel: Codable {
     let status: Bool?
     let message: String?
     let data: PostDataClass?
     let error : PostIDCardError?
 }
-struct PostIDCardError: Codable {
+public struct PostIDCardError: Codable {
     let bdy: PostIDCardBdy?
     let user : UserStatusParse?
 }
 
 // MARK: - Bdy
-struct PostIDCardBdy: Codable {
+public struct PostIDCardBdy: Codable {
     let type, title, status, detail: String?
     let instance: String?
 }
 
 // MARK: - DataClass
-struct PostDataClass: Codable {
+public struct PostDataClass: Codable {
     let resp: PostResp?
 }
 
 // MARK: - Resp
-struct PostResp: Codable {
+public struct PostResp: Codable {
     let contentLength: String
     let operationLocation: String
     let xEnvoyUpstreamServiceTime, apimRequestID, strictTransportSecurity, xContentTypeOptions: String

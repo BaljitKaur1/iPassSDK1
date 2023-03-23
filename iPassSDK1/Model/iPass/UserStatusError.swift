@@ -8,17 +8,17 @@
 import Foundation
 
 // MARK: - UserStatusError
-struct UserStatusError: Codable {
+public struct UserStatusError: Codable {
     let uerror: UserError?
 }
 
 // MARK: - Error
-struct UserError: Codable {
+public struct UserError: Codable {
     let ustatusParse: UserStatusParse?
 }
 
 // MARK: - StatusParse
-struct UserStatusParse: Codable {
+public struct UserStatusParse: Codable {
     let type, title: String?
     let status: Int?
     let detail: String?

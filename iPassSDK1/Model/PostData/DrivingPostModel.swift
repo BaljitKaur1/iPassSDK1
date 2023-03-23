@@ -6,19 +6,19 @@
 import Foundation
 
 // MARK: - DrivingPostModel
-struct DrivingPostModel: Codable {
+public struct DrivingPostModel: Codable {
     let status: Bool?
     let message: String?
     let data: DPDataClass?
 }
 
 // MARK: - DataClass
-struct DPDataClass: Codable {
+public struct DPDataClass: Codable {
     let resp: DPResp?
 }
 
 // MARK: - Resp
-struct DPResp: Codable {
+public struct DPResp: Codable {
     let contentLength: String
     let operationLocation: String
     let xEnvoyUpstreamServiceTime, apimRequestID, strictTransportSecurity, xContentTypeOptions: String

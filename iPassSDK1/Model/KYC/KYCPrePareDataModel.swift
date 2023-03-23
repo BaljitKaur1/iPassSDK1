@@ -6,7 +6,7 @@
 import Foundation
 
 // MARK: - KYCPrePareData
-struct KYCPrePareData: Codable {
+public struct KYCPrePareData: Codable {
     let status: Bool?
     let message: String?
     let error: KYCPrePareError?
@@ -14,46 +14,46 @@ struct KYCPrePareData: Codable {
 }
 
 // MARK: - DataClass
-struct KYCPreDataClass: Codable {
+public struct KYCPreDataClass: Codable {
     let parseBody: KYCParseBody?
 }
 
 // MARK: - ParseBody
-struct KYCParseBody: Codable {
+public struct KYCParseBody: Codable {
     let timestamp: String?
     let account, workflowExecution: KYCAccount?
     let api: KYCAPI?
 }
 
 // MARK: - Account
-struct KYCAccount: Codable {
+public struct KYCAccount: Codable {
     let id: String?
 }
 
 // MARK: - API
-struct KYCAPI: Codable {
+public struct KYCAPI: Codable {
     let parts: KYCParts?
     let workflowExecution: String?
 }
 
 // MARK: - Parts
-struct KYCParts: Codable {
+public struct KYCParts: Codable {
 }
 
 // MARK: - Error
-struct KYCPrePareError: Codable {
+public struct KYCPrePareError: Codable {
     let bdy: Bdy?
     let user : ErrorData?
     let parseBody :KYCPrePareParseNdy?
 }
 
-struct KYCPrePareParseNdy: Codable {
+public struct KYCPrePareParseNdy: Codable {
     let title: String?
     let status: Int?
     let detail: String?
 }
 // MARK: - Bdy
-struct Bdy: Codable {
+public struct Bdy: Codable {
     let type, title, status, detail: String?
     let instance: String?
 }
