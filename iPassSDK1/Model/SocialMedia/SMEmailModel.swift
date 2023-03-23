@@ -11,7 +11,7 @@
 import Foundation
 
 // MARK: - GetPassModel
-struct GetSocialPassModel: Codable {
+public struct GetSocialPassModel: Codable {
     let status: Bool?
     let message: String?
     let data: GetSocialPassModelData?
@@ -20,19 +20,19 @@ struct GetSocialPassModel: Codable {
 }
 
 // MARK: - GetPassModelData
-struct GetSocialPassModelData: Codable {
+public struct GetSocialPassModelData: Codable {
     let resParse: GetSocialResParse?
 }
 
 // MARK: - ResParse
-struct GetSocialResParse: Codable {
+public struct GetSocialResParse: Codable {
     let success: Bool?
     let error: GetSocialError?
     let data: GetSocialResParseData?
 }
 
 // MARK: - ResParseData
-struct GetSocialResParseData: Codable {
+public struct GetSocialResParseData: Codable {
     let email: String?
     let score: Int?
     let deliverable: Bool?
@@ -52,7 +52,7 @@ struct GetSocialResParseData: Codable {
 }
 
 // MARK: - AccountDetails
-struct GetSocialAccountDetails: Codable {
+public struct GetSocialAccountDetails: Codable {
     let apple, ebay: GetSocialAdobe?
     let amazon, qzone, adobe, mailru: GetSocialAdobe?
     let wordpress, imgur, disneyplus, netflix: GetSocialAdobe?
@@ -81,12 +81,12 @@ struct GetSocialAccountDetails: Codable {
 }
 
 // MARK: - Adobe
-struct GetSocialAdobe: Codable {
+public struct GetSocialAdobe: Codable {
     let registered: Bool?
 }
 
 // MARK: - Airbnb
-struct GetSocialAirbnb: Codable {
+public struct GetSocialAirbnb: Codable {
     let registered: Bool?
     let about, createdAt, firstName: String?
     let identityVerified, location, image, revieweeCount: String?
@@ -104,19 +104,19 @@ struct GetSocialAirbnb: Codable {
 }
 
 // MARK: - Facebook
-struct GetSocialFacebook: Codable {
+public struct GetSocialFacebook: Codable {
     let registered: Bool?
     let url, name, photo: String?
 }
 
 // MARK: - Flickr
-struct GetSocialFlickr: Codable {
+public struct GetSocialFlickr: Codable {
     let registered: Bool?
     let username: String?
 }
 
 // MARK: - Foursquare
-struct GetSocialFoursquare: Codable {
+public struct GetSocialFoursquare: Codable {
     let registered: Bool?
     let bio: String?
     let photo: String?
@@ -129,13 +129,13 @@ struct GetSocialFoursquare: Codable {
 }
 
 // MARK: - Google
-struct GetSocialGoogle: Codable {
+public struct GetSocialGoogle: Codable {
     let registered: Bool?
     let photo: String?
 }
 
 // MARK: - Gravatar
-struct GetSocialGravatar: Codable {
+public struct GetSocialGravatar: Codable {
     let registered: Bool?
     let location, name: String?
     let profileURL: String?
@@ -149,7 +149,7 @@ struct GetSocialGravatar: Codable {
 }
 
 // MARK: - Linkedin
-struct GetSocialLinkedin: Codable {
+public struct GetSocialLinkedin: Codable {
     let registered, url, name, company: String?
     let title, location, website, twitter: String?
     let photo, connectionCount: String?
@@ -161,7 +161,7 @@ struct GetSocialLinkedin: Codable {
 }
 
 // MARK: - Ok
-struct GetSocialOk: Codable {
+public struct GetSocialOk: Codable {
     let registered: Bool?
     let city: String?
     let age, dateJoined: Int?
@@ -173,7 +173,7 @@ struct GetSocialOk: Codable {
 }
 
 // MARK: - Skype
-struct GetSocialSkype: Codable {
+public struct GetSocialSkype: Codable {
     let registered: Bool?
     let country, city: String?
     let gender: Int?
@@ -185,13 +185,13 @@ struct GetSocialSkype: Codable {
 }
 
 // MARK: - AppliedRule
-struct GetSocialAppliedRule: Codable {
+public struct GetSocialAppliedRule: Codable {
     let id, name, operation: String?
     let score: Int?
 }
 
 // MARK: - BreachDetails
-struct GetSocialBreachDetails: Codable {
+public struct GetSocialBreachDetails: Codable {
     let haveibeenpwnedListed: Bool?
     let numberOfBreaches: Int?
     let firstBreach: String?
@@ -206,12 +206,12 @@ struct GetSocialBreachDetails: Codable {
 }
 
 // MARK: - Breach
-struct GetSocialBreach: Codable {
+public struct GetSocialBreach: Codable {
     let name, domain, date: String?
 }
 
 // MARK: - DomainDetails
-struct GetSocialDomainDetails: Codable {
+public struct GetSocialDomainDetails: Codable {
     let domain, tld: String?
     let registered: Bool?
     let created, updated, expires, registrarName: String?
@@ -235,7 +235,7 @@ struct GetSocialDomainDetails: Codable {
 }
 
 // MARK: - Error
-struct GetSocialError: Codable {
+public struct GetSocialError: Codable {
     let user: UserStatusParse?
     let message: String?
 }

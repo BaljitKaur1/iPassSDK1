@@ -6,7 +6,7 @@
 import Foundation
 
 // MARK: - SMPhoneModel
-struct SMPhoneModel: Codable {
+public struct SMPhoneModel: Codable {
     let status: Bool?
     let message: String?
     let data: SMPhoneData?
@@ -14,31 +14,31 @@ struct SMPhoneModel: Codable {
 }
 
 // MARK: - Error
-struct SMPhoneError: Codable {
+public struct SMPhoneError: Codable {
     let bdy: SMPhoneBdy?
     let user: UserStatusParse?
 }
 
 // MARK: - Bdy
-struct SMPhoneBdy: Codable {
+public struct SMPhoneBdy: Codable {
     let type, title, status, detail: String?
     let instance: String?
 }
 
 // MARK: - SMPhoneModelData
-struct SMPhoneData: Codable {
+public struct SMPhoneData: Codable {
     let resParse: SMResParse?
 }
 
 // MARK: - ResParse
-struct SMResParse: Codable {
+public struct SMResParse: Codable {
     let success: Bool?
     let error: Error?
     let data: ResParseData?
 }
 
 // MARK: - ResParseData
-struct ResParseData: Codable {
+public struct ResParseData: Codable {
     let number: Int?
     let valid, disposable: Bool?
     let type, country, carrier: String?
@@ -54,7 +54,7 @@ struct ResParseData: Codable {
 }
 
 // MARK: - AccountDetails
-struct AccountDetails: Codable {
+public struct AccountDetails: Codable {
     let facebook: Bukalapak?
     let google: Google?
     let twitter, instagram, yahoo, microsoft: Bukalapak?
@@ -69,12 +69,12 @@ struct AccountDetails: Codable {
 }
 
 // MARK: - Bukalapak
-struct Bukalapak: Codable {
+public struct Bukalapak: Codable {
     let registered: Bool?
 }
 
 // MARK: - Google
-struct Google: Codable {
+public struct Google: Codable {
     let registered: Bool?
     let accountID, fullName: String?
 
@@ -86,18 +86,18 @@ struct Google: Codable {
 }
 
 // MARK: - Line
-struct Line: Codable {
+public struct Line: Codable {
     let registered, name, photo: String?
 }
 
 // MARK: - Ok
-struct Ok: Codable {
+public struct Ok: Codable {
     let registered: Bool?
     let age: String?
 }
 
 // MARK: - Skype
-struct Skype: Codable {
+public struct Skype: Codable {
     let registered: Bool?
     let age: Int?
     let city: String?
@@ -111,7 +111,7 @@ struct Skype: Codable {
 }
 
 // MARK: - Telegram
-struct Telegram: Codable {
+public struct Telegram: Codable {
     let registered: Bool?
     let photo: String?
     let lastSeen: String?
@@ -126,7 +126,7 @@ struct Telegram: Codable {
 }
 
 // MARK: - Zalo
-struct Zalo: Codable {
+public struct Zalo: Codable {
     let registered: Bool?
     let dateOfBirth, name, uid: String?
 
@@ -138,13 +138,13 @@ struct Zalo: Codable {
 }
 
 // MARK: - AppliedRule
-struct AppliedRule: Codable {
+public struct AppliedRule: Codable {
     let id, name, operation: String?
     let score: Int?
 }
 
 // MARK: - Error
-struct Error: Codable {
+public struct Error: Codable {
     let message : String?
 }
 

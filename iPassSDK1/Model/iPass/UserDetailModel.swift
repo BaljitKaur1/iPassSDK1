@@ -6,7 +6,7 @@
 import Foundation
 
 // MARK: - UserDetailModel
-struct UserDetailModel: Codable {
+public struct UserDetailModel: Codable {
     let status: Bool?
     let message: String?
     let data: UserDetailData?
@@ -14,12 +14,12 @@ struct UserDetailModel: Codable {
 }
 
 // MARK: - DataClass
-struct UserDetailData: Codable {
+public struct UserDetailData: Codable {
     let parseBody: ParseBody?
 }
 
 // MARK: - ParseBody
-struct ParseBody: Codable {
+public struct ParseBody: Codable {
     let workflow: Workflow
     let account: UserDetailAccount
     let createdAt, completedAt, wipedOutAt: String
@@ -31,54 +31,54 @@ struct ParseBody: Codable {
 }
 
 // MARK: - Account
-struct UserDetailAccount: Codable {
+public struct UserDetailAccount: Codable {
     let id: String
 }
 
 // MARK: - Capabilities
-struct Capabilities: Codable {
+public struct Capabilities: Codable {
 }
 
 // MARK: - Credential
-struct UserCredential: Codable {
+public struct UserCredential: Codable {
     let id, category: String
 }
 
 // MARK: - Decision
-struct Decision: Codable {
+public struct Decision: Codable {
     let type: String
     let details: Details
     let risk: Risk
 }
 
 // MARK: - Details
-struct Details: Codable {
+public struct Details: Codable {
     let label: String
 }
 
 // MARK: - Risk
-struct Risk: Codable {
+public struct Risk: Codable {
     let score: Int
 }
 
 // MARK: - Steps
-struct Steps: Codable {
+public struct Steps: Codable {
     let href: String
 }
 
 // MARK: - Workflow
-struct Workflow: Codable {
+public struct Workflow: Codable {
     let id, status, definitionKey, userReference: String
     let customerInternalReference: String
 }
 
 // MARK: - Error
-struct UserDetailError: Codable {
+public struct UserDetailError: Codable {
     let parseBody: ParseErrorBody?
 }
 
 // MARK: - ParseBody
-struct ParseErrorBody: Codable {
+public struct ParseErrorBody: Codable {
     let type, title: String?
     let status: Int?
     let detail, issupadmin, sessionsid, pubprivkey: String?

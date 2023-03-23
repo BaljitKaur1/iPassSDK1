@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - DeleteAccountDataModel
-struct DeleteAccountDataModel: Codable {
+public struct DeleteAccountDataModel: Codable {
     let status: Bool?
     let message: String?
     let data: DeleteDataClass?
@@ -16,5 +16,5 @@ struct DeleteAccountDataModel: Codable {
 }
 
 // MARK: - DataClass
-struct DeleteDataClass: Codable {
+public struct DeleteDataClass: Codable {
 }

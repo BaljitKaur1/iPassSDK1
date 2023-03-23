@@ -6,7 +6,7 @@
 import Foundation
 
 // MARK: - PassPostModel
-struct PassPostModel: Codable {
+public struct PassPostModel: Codable {
     let status: Bool?
     let message: String?
     let data: PassDataClass?
@@ -14,22 +14,22 @@ struct PassPostModel: Codable {
 }
 
 // MARK: - DataClass
-struct PassDataClass: Codable {
+public struct PassDataClass: Codable {
     let resp: Resp
 }
-struct PassportError: Codable {
+public struct PassportError: Codable {
     let bdy: PassportBdy?
     let userError : UserStatusParse?
 }
 
 // MARK: - Bdy
-struct PassportBdy: Codable {
+public struct PassportBdy: Codable {
     let type, title, status, detail: String?
     let instance: String?
 }
 
 // MARK: - Resp
-struct Resp: Codable {
+public struct Resp: Codable {
     let contentLength: String
     let operationLocation: String
     let xEnvoyUpstreamServiceTime, apimRequestID, strictTransportSecurity, xContentTypeOptions: String
