@@ -11,26 +11,7 @@ open class Apis: NSObject {
         static let shared = Apis()
     }
     
-    open func testDemo() {
-        print("=-=-=-===testDemo")
-    }
-    
     var baseUrl = ""
-    
-    //    open func getAlamofire() {
-    //        AF.request("https://mbd.cookcountysupernetwork.com/ap/swift_math_get.asp", method: .post,  parameters: nil, encoding: JSONEncoding.default)
-    //            .responseJSON { response in
-    //                switch response.result {
-    //                case .success(let value):
-    //                    if let json = value as? [String: Any] {
-    //                        print(json["Result"] as? Int as Any)
-    //                    }
-    //                case .failure(let error):
-    //                    print(error)
-    //                }
-    //            }
-    //    }
-    
     
     // Mark: - 1 .
     open func initJWTToken(first_name: String,last_name:String,password:String,email:String,token:String, completion: @escaping(_ : JWTToken? , ErrorBase?) -> Void) {
