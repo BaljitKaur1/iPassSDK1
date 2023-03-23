@@ -12,5 +12,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.swift_version = '5.0'
   s.source_files = 'iPassSDK1/APIManager/*.swift', 'iPassSDK1/Sources/Apis.swift', 'iPassSDK1/Model/iPass/*.swift', 'iPassSDK1/Model/SocialMedia/*.swift', 'iPassSDK1/Model/PostData/*.swift', 'iPassSDK1/Model/KYC/*.swift'
- s.frameworks = 'Alamofire'
+  s.framework = 'Alamofire'
+  s.xcconfig = { 'LIBRARY_SEARCH_PATHS' => '$(SDKROOT)/usr/lib/swift' }
 end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C98B28D3290193FF1A90F61 /* Pods_iPassSDK1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA996C16DDC21E9F7855919 /* Pods_iPassSDK1.framework */; };
+		400F2E1329CC2E0500BBB2A6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400F2E1229CC2E0500BBB2A6 /* Alamofire.framework */; };
 		4092968129927371000C3F1B /* iPassSDK1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092968029927371000C3F1B /* iPassSDK1.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40D2A52329CB085E00339E92 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52029CB085E00339E92 /* WebServices.swift */; };
 		40D2A52429CB085E00339E92 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52129CB085E00339E92 /* Reachability.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		08AA388B12B858A009C57C8C /* Pods-iPassSDK1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassSDK1.release.xcconfig"; path = "Target Support Files/Pods-iPassSDK1/Pods-iPassSDK1.release.xcconfig"; sourceTree = "<group>"; };
 		1EA996C16DDC21E9F7855919 /* Pods_iPassSDK1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPassSDK1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		400F2E1229CC2E0500BBB2A6 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4092967D29927371000C3F1B /* iPassSDK1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPassSDK1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4092968029927371000C3F1B /* iPassSDK1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPassSDK1.h; sourceTree = "<group>"; };
 		40D2A52029CB085E00339E92 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C98B28D3290193FF1A90F61 /* Pods_iPassSDK1.framework in Frameworks */,
+				400F2E1329CC2E0500BBB2A6 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +192,7 @@
 		F0F45FD86F800AB86ACA2991 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				400F2E1229CC2E0500BBB2A6 /* Alamofire.framework */,
 				40D2A54E29CB4E9F00339E92 /* Alamofire.framework */,
 				1EA996C16DDC21E9F7855919 /* Pods_iPassSDK1.framework */,
 			);
