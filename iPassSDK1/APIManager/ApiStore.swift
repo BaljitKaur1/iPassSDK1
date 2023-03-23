@@ -15,7 +15,7 @@ class ApiStore : NSObject {
     open func baseRequestApi<T: Codable>(_ url: URLConvertible, _ method : HTTPMethod, _ params: [String: Any]? = nil, _ headers: [String: String]? = nil, completion: @escaping (_ response : T?) -> Void){
         print(method)
         print(url)
-        print(params)
+        print(params as Any)
         print(headers as Any)
         if Reachability().isConnectedToNetwork() {
             AF.request(url, method: method, parameters: params, encoding: JSONEncoding.default, headers: headers?.toHeader()) { $0.timeoutInterval = 10 }.validate().responseDecodable(of: T.self) { response in
@@ -93,7 +93,7 @@ class ApiStore : NSObject {
                                 //                                }
                             }
                         } catch {
-                            print(String(data: response.data!, encoding: String.Encoding.utf8))
+                            print(String(data: response.data!, encoding: String.Encoding.utf8) as Any)
                         }
                     }
                 } else {
@@ -134,29 +134,29 @@ class ApiStore : NSObject {
                     case .failure(let error):
                         print(error)
                     if error.responseCode == 401 {
-                       var dict = ["user": ["title": "Bad Request",
+                        let dict = ["user": ["title": "Bad Request",
                                     "status": 401,
                                     "detail": "User does not exist"
                                            ]];
-                        var dict2 = ["error": dict];
+                        let dict2 = ["error": dict];
                             
                         completion(dict2)
                     }
                     else if error.responseCode == 403  {
-                        var dict = ["user": ["title": "Bad Request",
+                        let dict = ["user": ["title": "Bad Request",
                                      "status": 403,
                                      "detail": "Internal server error"
                                             ]];
-                         var dict2 = ["error": dict];
+                        let dict2 = ["error": dict];
                              
                          completion(dict2)
                     }
                     else{
-                        var dict = ["user": ["title": "Bad Request",
+                        let dict = ["user": ["title": "Bad Request",
                                      "status": 403,
                                      "detail": "Internal server error"
                                             ]];
-                         var dict2 = ["error": dict];
+                        let dict2 = ["error": dict];
                              
                          completion(dict2)
                         
@@ -186,7 +186,7 @@ class ApiStore : NSObject {
     func handleErrorCase(_ statusCode : Int?, _ dict : NSDictionary?) {
         let msg = dict?.value(forKey: "message") as? String
         
-        print("dict", dict)
+        print("dict", dict as Any)
         print("msg->", msg as Any)
         print("statusCode->",statusCode!)
         

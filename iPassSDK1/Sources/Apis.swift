@@ -21,7 +21,7 @@ open class Apis: NSObject {
                 switch response.result {
                 case .success(let value):
                     if let json = value as? [String: Any] {
-                        print(json["Result"] as? Int)
+                        print(json["Result"] as? Int as Any)
                     }
                 case .failure(let error):
                     print(error)
@@ -29,7 +29,7 @@ open class Apis: NSObject {
             }
     }
     
-    /*
+    
     // Mark: - 1 .
     func initJWTToken(first_name: String,last_name:String,password:String,email:String,token:String, completion: @escaping(_ : JWTToken? , ErrorBase?) -> Void) {
         let params : [String: String] = [
@@ -120,7 +120,7 @@ open class Apis: NSObject {
         
         
         //Mark :-7 Front Image Data
-    func getfaceImage (accessToken:String, apiAuthorizationToken:String, credentialId:String, accountId :String, completion:@escaping (_ : FrontImageData?, _ :  Error111?)-> Void) {
+        func getfaceImage (accessToken:String, apiAuthorizationToken:String, credentialId:String, accountId :String, completion:@escaping (_ : FrontImageData?, _ :  Error111?)-> Void) {
             let baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpointWithoutIpass.rawValue + Endpoints.faceImage.rawValue + "?credentialId=\(credentialId)" + "&token=\(accessToken)" + "&accountId=\(accountId)"
             let headers: HTTPHeaders = ["Content-Type": "application/json","Accept": "application/json","Authorization":apiAuthorizationToken]
             ApiStore.shared.baseRequestApi(baseUrl, .get,nil,headers.dictionary) { (result: FrontImageData? ) in
@@ -192,7 +192,7 @@ open class Apis: NSObject {
             let params = [ "email": email]
             let headers: HTTPHeaders = ["Content-Type": "application/json","Accept": "application/json","Authorization":jwtToken]
             ApiStore.shared.baseRequestApi(baseUrl, .post,params,headers.dictionary) { (result: GetSocialPassModel? ) in
-                print(result)
+                print(result as Any)
                 if result?.message == "Fail" {
                     completion(nil,(result?.error)!)
                 } else if result?.message == "Success" {
@@ -211,7 +211,7 @@ open class Apis: NSObject {
             ]
             ApiStore.shared.baseRequestApi(baseUrl, .post,params,headers.dictionary) { (result : PassPostModel?) in
                 if result?.message == "Fail"{
-                    print("Error----",result?.error)
+                    print("Error----",result?.error as Any)
                     completion(nil,result?.error)
                 } else if (result?.message == "Success"){
                     completion(result,nil)
@@ -231,7 +231,7 @@ open class Apis: NSObject {
             ]
             ApiStore.shared.baseRequestApi(baseUrl, .post,params,headers.dictionary) { (result : PassPostModel?) in
                 if result?.message == "Fail"{
-                    print("Error----",result?.error)
+                    print("Error----",result?.error as Any)
                     completion(nil,result?.error)
                 } else if (result?.message == "Success"){
                     completion(result,nil)
@@ -250,7 +250,7 @@ open class Apis: NSObject {
             ]
             ApiStore.shared.baseRequestApi(baseUrl, .post,params,headers.dictionary) { (result : PassPostModel?) in
                 if result?.message == "Fail"{
-                    print("Error----",result?.error)
+                    print("Error----",result?.error as Any)
                     completion(nil,result?.error)
                 } else if (result?.message == "Success"){
                     completion(result,nil)
@@ -269,7 +269,7 @@ open class Apis: NSObject {
             ]
             ApiStore.shared.baseRequestApi(baseUrl, .post,params,headers.dictionary) { (result : PassPostModel?) in
                 if result?.message == "Fail"{
-                    print("Error----",result?.error)
+                    print("Error----",result?.error as Any)
                     completion(nil,result?.error)
                 } else if (result?.message == "Success"){
                     completion(result,nil)
@@ -288,7 +288,7 @@ open class Apis: NSObject {
             ]
             ApiStore.shared.baseRequestApi(baseUrl, .post,params,headers.dictionary) { (result : PassPostModel?) in
                 if result?.message == "Fail"{
-                    print("Error----",result?.error)
+                    print("Error----",result?.error as Any)
                     completion(nil,result?.error)
                 } else if (result?.message == "Success"){
                     completion(result,nil)
@@ -323,6 +323,4 @@ open class Apis: NSObject {
             
         }
     }
-     
-     */
 }
