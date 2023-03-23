@@ -9,10 +9,10 @@ import Foundation
 
 // MARK: - DeleteAccountDataModel
 public struct DeleteAccountDataModel: Codable {
-    let status: Bool?
-    let message: String?
-    let data: DeleteDataClass?
-    let error: ErrorBase?
+    public let status: Bool?
+    public let message: String?
+    public let data: DeleteDataClass?
+    public let error: ErrorBase?
 }
 
 // MARK: - DataClass

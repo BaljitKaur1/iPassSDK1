@@ -3,33 +3,33 @@ import Foundation
 
 // MARK: - IDCardFrontModel
 public struct PostIDCardFrontModel: Codable {
-    let status: Bool?
-    let message: String?
-    let data: PostDataClass?
-    let error : PostIDCardError?
+    public let status: Bool?
+    public let message: String?
+    public let data: PostDataClass?
+    public let error : PostIDCardError?
 }
 public struct PostIDCardError: Codable {
-    let bdy: PostIDCardBdy?
-    let user : UserStatusParse?
+    public let bdy: PostIDCardBdy?
+    public let user : UserStatusParse?
 }
 
 // MARK: - Bdy
 public struct PostIDCardBdy: Codable {
-    let type, title, status, detail: String?
-    let instance: String?
+    public let type, title, status, detail: String?
+    public let instance: String?
 }
 
 // MARK: - DataClass
 public struct PostDataClass: Codable {
-    let resp: PostResp?
+    public let resp: PostResp?
 }
 
 // MARK: - Resp
 public struct PostResp: Codable {
-    let contentLength: String
-    let operationLocation: String
-    let xEnvoyUpstreamServiceTime, apimRequestID, strictTransportSecurity, xContentTypeOptions: String
-    let xMSRegion, date, connection: String
+    public let contentLength: String
+    public let operationLocation: String
+    public let xEnvoyUpstreamServiceTime, apimRequestID, strictTransportSecurity, xContentTypeOptions: String
+    public let xMSRegion, date, connection: String
 
     enum CodingKeys: String, CodingKey {
         case contentLength = "content-length"

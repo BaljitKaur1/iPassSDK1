@@ -9,10 +9,10 @@ import Foundation
 
 // MARK: - UserDetailError
 public struct UserDetailGetImageModel: Codable {
-    let status: Bool?
-    let message: String?
-    let error: ErrorBase?
+    public let status: Bool?
+    public let message: String?
+    public let error: ErrorBase?
 }
 public struct userFaceDataClass: Codable {
-    let img: String
+    public let img: String
 }

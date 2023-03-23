@@ -12,34 +12,34 @@ import Foundation
 
 // MARK: - GetPassModel
 public struct GetSocialPassModel: Codable {
-    let status: Bool?
-    let message: String?
-    let data: GetSocialPassModelData?
-    let error: GetSocialError?
+    public let status: Bool?
+    public let message: String?
+    public let data: GetSocialPassModelData?
+    public let error: GetSocialError?
     
 }
 
 // MARK: - GetPassModelData
 public struct GetSocialPassModelData: Codable {
-    let resParse: GetSocialResParse?
+    public let resParse: GetSocialResParse?
 }
 
 // MARK: - ResParse
 public struct GetSocialResParse: Codable {
-    let success: Bool?
-    let error: GetSocialError?
-    let data: GetSocialResParseData?
+    public let success: Bool?
+    public let error: GetSocialError?
+    public let data: GetSocialResParseData?
 }
 
 // MARK: - ResParseData
 public struct GetSocialResParseData: Codable {
-    let email: String?
-    let score: Int?
-    let deliverable: Bool?
-    let domainDetails: GetSocialDomainDetails?
-    let accountDetails: GetSocialAccountDetails? //issue
-    let breachDetails: GetSocialBreachDetails?
-    let appliedRules: [GetSocialAppliedRule]?
+    public let email: String?
+    public let score: Int?
+    public let deliverable: Bool?
+    public let domainDetails: GetSocialDomainDetails?
+    public let accountDetails: GetSocialAccountDetails? //issue
+    public let breachDetails: GetSocialBreachDetails?
+    public let appliedRules: [GetSocialAppliedRule]?
     
     enum CodingKeys: String, CodingKey {
         case email, score, deliverable
@@ -53,44 +53,44 @@ public struct GetSocialResParseData: Codable {
 
 // MARK: - AccountDetails
 public struct GetSocialAccountDetails: Codable {
-    let apple, ebay: GetSocialAdobe?
-    let amazon, qzone, adobe, mailru: GetSocialAdobe?
-    let wordpress, imgur, disneyplus, netflix: GetSocialAdobe?
-    let jdid, flipkart, bukalapak, archiveorg: GetSocialAdobe?
-    let lazada, zoho, samsung, evernote: GetSocialAdobe?
-    let envato, patreon, tokopedia, rambler: GetSocialAdobe?
-    let quora, atlassian: GetSocialAdobe?
-    let kakao, booking: GetSocialAdobe?
-    let weibo, yahoo, discord: GetSocialAdobe?
-    let spotify, tumblr, twitter, vimeo: GetSocialAdobe?
-    let microsoft, myspace, pinterest: GetSocialAdobe?
-    let github: GetSocialAdobe?
-    let instagram, lastfm: GetSocialAdobe?
+    public let apple, ebay: GetSocialAdobe?
+    public let amazon, qzone, adobe, mailru: GetSocialAdobe?
+    public let wordpress, imgur, disneyplus, netflix: GetSocialAdobe?
+    public let jdid, flipkart, bukalapak, archiveorg: GetSocialAdobe?
+    public let lazada, zoho, samsung, evernote: GetSocialAdobe?
+    public let envato, patreon, tokopedia, rambler: GetSocialAdobe?
+    public let quora, atlassian: GetSocialAdobe?
+    public let kakao, booking: GetSocialAdobe?
+    public let weibo, yahoo, discord: GetSocialAdobe?
+    public let spotify, tumblr, twitter, vimeo: GetSocialAdobe?
+    public let microsoft, myspace, pinterest: GetSocialAdobe?
+    public let github: GetSocialAdobe?
+    public let instagram, lastfm: GetSocialAdobe?
     
-    let facebook: GetSocialFacebook?
-    let flickr: GetSocialFlickr?
+    public let facebook: GetSocialFacebook?
+    public let flickr: GetSocialFlickr?
     
     
-    let foursquare: GetSocialFoursquare?
-    let google: GetSocialGoogle?
-    let gravatar: GetSocialGravatar?
-    let linkedin: GetSocialLinkedin?
-    let skype: GetSocialSkype?
-    let ok: GetSocialOk?
-    let airbnb: GetSocialAirbnb?
+    public let foursquare: GetSocialFoursquare?
+    public let google: GetSocialGoogle?
+    public let gravatar: GetSocialGravatar?
+    public let linkedin: GetSocialLinkedin?
+    public let skype: GetSocialSkype?
+    public let ok: GetSocialOk?
+    public let airbnb: GetSocialAirbnb?
 }
 
 // MARK: - Adobe
 public struct GetSocialAdobe: Codable {
-    let registered: Bool?
+    public let registered: Bool?
 }
 
 // MARK: - Airbnb
 public struct GetSocialAirbnb: Codable {
-    let registered: Bool?
-    let about, createdAt, firstName: String?
-    let identityVerified, location, image, revieweeCount: String?
-    let trips, work: String?
+    public let registered: Bool?
+    public let about, createdAt, firstName: String?
+    public let identityVerified, location, image, revieweeCount: String?
+    public let trips, work: String?
     
     enum CodingKeys: String, CodingKey {
         case registered, about
@@ -105,22 +105,22 @@ public struct GetSocialAirbnb: Codable {
 
 // MARK: - Facebook
 public struct GetSocialFacebook: Codable {
-    let registered: Bool?
-    let url, name, photo: String?
+    public let registered: Bool?
+    public let url, name, photo: String?
 }
 
 // MARK: - Flickr
 public struct GetSocialFlickr: Codable {
-    let registered: Bool?
-    let username: String?
+    public let registered: Bool?
+    public let username: String?
 }
 
 // MARK: - Foursquare
 public struct GetSocialFoursquare: Codable {
-    let registered: Bool?
-    let bio: String?
-    let photo: String?
-    let profileURL: String?
+    public let registered: Bool?
+    public let bio: String?
+    public let photo: String?
+    public let profileURL: String?
     
     enum CodingKeys: String, CodingKey {
         case registered, bio, photo
@@ -130,16 +130,16 @@ public struct GetSocialFoursquare: Codable {
 
 // MARK: - Google
 public struct GetSocialGoogle: Codable {
-    let registered: Bool?
-    let photo: String?
+    public let registered: Bool?
+    public let photo: String?
 }
 
 // MARK: - Gravatar
 public struct GetSocialGravatar: Codable {
-    let registered: Bool?
-    let location, name: String?
-    let profileURL: String?
-    let username: String?
+    public let registered: Bool?
+    public let location, name: String?
+    public let profileURL: String?
+    public let username: String?
     
     enum CodingKeys: String, CodingKey {
         case registered, location, name
@@ -150,9 +150,9 @@ public struct GetSocialGravatar: Codable {
 
 // MARK: - Linkedin
 public struct GetSocialLinkedin: Codable {
-    let registered, url, name, company: String?
-    let title, location, website, twitter: String?
-    let photo, connectionCount: String?
+    public let registered, url, name, company: String?
+    public let title, location, website, twitter: String?
+    public let photo, connectionCount: String?
     
     enum CodingKeys: String, CodingKey {
         case registered, url, name, company, title, location, website, twitter, photo
@@ -162,9 +162,9 @@ public struct GetSocialLinkedin: Codable {
 
 // MARK: - Ok
 public struct GetSocialOk: Codable {
-    let registered: Bool?
-    let city: String?
-    let age, dateJoined: Int?
+    public let registered: Bool?
+    public let city: String?
+    public let age, dateJoined: Int?
     
     enum CodingKeys: String, CodingKey {
         case registered, city, age
@@ -174,28 +174,28 @@ public struct GetSocialOk: Codable {
 
 // MARK: - Skype
 public struct GetSocialSkype: Codable {
-    let registered: Bool?
-    let country, city: String?
-    let gender: Int?
-    let name, id, handle: String?
-    let bio: String?
-    let age: Int?
-    let language, state: String?
-    let photo: String?
+    public let registered: Bool?
+    public let country, city: String?
+    public let gender: Int?
+    public let name, id, handle: String?
+    public let bio: String?
+    public let age: Int?
+    public let language, state: String?
+    public let photo: String?
 }
 
 // MARK: - AppliedRule
 public struct GetSocialAppliedRule: Codable {
-    let id, name, operation: String?
-    let score: Int?
+    public let id, name, operation: String?
+    public let score: Int?
 }
 
 // MARK: - BreachDetails
 public struct GetSocialBreachDetails: Codable {
-    let haveibeenpwnedListed: Bool?
-    let numberOfBreaches: Int?
-    let firstBreach: String?
-    let breaches: [GetSocialBreach]?
+    public let haveibeenpwnedListed: Bool?
+    public let numberOfBreaches: Int?
+    public let firstBreach: String?
+    public let breaches: [GetSocialBreach]?
     
     enum CodingKeys: String, CodingKey {
         case haveibeenpwnedListed = "haveibeenpwned_listed"
@@ -207,18 +207,18 @@ public struct GetSocialBreachDetails: Codable {
 
 // MARK: - Breach
 public struct GetSocialBreach: Codable {
-    let name, domain, date: String?
+    public let name, domain, date: String?
 }
 
 // MARK: - DomainDetails
 public struct GetSocialDomainDetails: Codable {
-    let domain, tld: String?
-    let registered: Bool?
-    let created, updated, expires, registrarName: String?
-    let registeredTo: String?
-    let disposable, free, custom, dmarcEnforced: Bool?
-    let spfStrict, validMX, acceptAll, suspiciousTLD: Bool?
-    let websiteExists: Bool?
+    public let domain, tld: String?
+    public let registered: Bool?
+    public let created, updated, expires, registrarName: String?
+    public let registeredTo: String?
+    public let disposable, free, custom, dmarcEnforced: Bool?
+    public let spfStrict, validMX, acceptAll, suspiciousTLD: Bool?
+    public let websiteExists: Bool?
     
     enum CodingKeys: String, CodingKey {
         case domain, tld, registered, created, updated, expires
@@ -236,8 +236,8 @@ public struct GetSocialDomainDetails: Codable {
 
 // MARK: - Error
 public struct GetSocialError: Codable {
-    let user: UserStatusParse?
-    let message: String?
+    public let user: UserStatusParse?
+    public let message: String?
 }
 
 // MARK: - Encode/decode helpers

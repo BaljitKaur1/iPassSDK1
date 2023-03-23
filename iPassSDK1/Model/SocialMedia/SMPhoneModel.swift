@@ -7,44 +7,44 @@ import Foundation
 
 // MARK: - SMPhoneModel
 public struct SMPhoneModel: Codable {
-    let status: Bool?
-    let message: String?
-    let data: SMPhoneData?
-    let error: SMPhoneError?
+    public let status: Bool?
+    public let message: String?
+    public let data: SMPhoneData?
+    public let error: SMPhoneError?
 }
 
 // MARK: - Error
 public struct SMPhoneError: Codable {
-    let bdy: SMPhoneBdy?
-    let user: UserStatusParse?
+    public let bdy: SMPhoneBdy?
+    public let user: UserStatusParse?
 }
 
 // MARK: - Bdy
 public struct SMPhoneBdy: Codable {
-    let type, title, status, detail: String?
-    let instance: String?
+    public let type, title, status, detail: String?
+    public let instance: String?
 }
 
 // MARK: - SMPhoneModelData
 public struct SMPhoneData: Codable {
-    let resParse: SMResParse?
+    public let resParse: SMResParse?
 }
 
 // MARK: - ResParse
 public struct SMResParse: Codable {
-    let success: Bool?
-    let error: Error?
-    let data: ResParseData?
+    public let success: Bool?
+    public let error: Error?
+    public let data: ResParseData?
 }
 
 // MARK: - ResParseData
 public struct ResParseData: Codable {
-    let number: Int?
-    let valid, disposable: Bool?
-    let type, country, carrier: String?
-    let score: Int?
-    let accountDetails: AccountDetails?
-    let appliedRules: [AppliedRule]?
+    public let number: Int?
+    public let valid, disposable: Bool?
+    public let type, country, carrier: String?
+    public let score: Int?
+    public let accountDetails: AccountDetails?
+    public let appliedRules: [AppliedRule]?
 
     enum CodingKeys: String, CodingKey {
         case number, valid, disposable, type, country, carrier, score
@@ -55,28 +55,28 @@ public struct ResParseData: Codable {
 
 // MARK: - AccountDetails
 public struct AccountDetails: Codable {
-    let facebook: Bukalapak?
-    let google: Google?
-    let twitter, instagram, yahoo, microsoft: Bukalapak?
-    let snapchat: Bukalapak?
-    let skype: Skype?
-    let whatsapp, telegram, viber: Telegram?
-    let kakao: Bukalapak?
-    let ok: Ok?
-    let zalo: Zalo?
-    let line: Line?
-    let flipkart, bukalapak, jdid: Bukalapak?
+    public let facebook: Bukalapak?
+    public let google: Google?
+    public let twitter, instagram, yahoo, microsoft: Bukalapak?
+    public let snapchat: Bukalapak?
+    public let skype: Skype?
+    public let whatsapp, telegram, viber: Telegram?
+    public let kakao: Bukalapak?
+    public let ok: Ok?
+    public let zalo: Zalo?
+    public let line: Line?
+    public let flipkart, bukalapak, jdid: Bukalapak?
 }
 
 // MARK: - Bukalapak
 public struct Bukalapak: Codable {
-    let registered: Bool?
+    public let registered: Bool?
 }
 
 // MARK: - Google
 public struct Google: Codable {
-    let registered: Bool?
-    let accountID, fullName: String?
+    public let registered: Bool?
+    public let accountID, fullName: String?
 
     enum CodingKeys: String, CodingKey {
         case registered
@@ -87,36 +87,36 @@ public struct Google: Codable {
 
 // MARK: - Line
 public struct Line: Codable {
-    let registered, name, photo: String?
+    public let registered, name, photo: String?
 }
 
 // MARK: - Ok
 public struct Ok: Codable {
-    let registered: Bool?
-    let age: String?
+    public let registered: Bool?
+    public let age: String?
 }
 
 // MARK: - Skype
 public struct Skype: Codable {
-    let registered: Bool?
-    let age: Int?
-    let city: String?
-    let bio: String?
-    let country: String?
-    let gender: Int?
-    let language: String?
-    let name, handle, id: String?
-    let photo: String?
-    let state: String?
+    public let registered: Bool?
+    public let age: Int?
+    public let city: String?
+    public let bio: String?
+    public let country: String?
+    public let gender: Int?
+    public let language: String?
+    public let name, handle, id: String?
+    public let photo: String?
+    public let state: String?
 }
 
 // MARK: - Telegram
 public struct Telegram: Codable {
-    let registered: Bool?
-    let photo: String?
-    let lastSeen: String?
-    let name: String?
-    let about: String?
+    public let registered: Bool?
+    public let photo: String?
+    public let lastSeen: String?
+    public let name: String?
+    public let about: String?
 
     enum CodingKeys: String, CodingKey {
         case registered, photo
@@ -127,8 +127,8 @@ public struct Telegram: Codable {
 
 // MARK: - Zalo
 public struct Zalo: Codable {
-    let registered: Bool?
-    let dateOfBirth, name, uid: String?
+    public let registered: Bool?
+    public let dateOfBirth, name, uid: String?
 
     enum CodingKeys: String, CodingKey {
         case registered
@@ -139,13 +139,13 @@ public struct Zalo: Codable {
 
 // MARK: - AppliedRule
 public struct AppliedRule: Codable {
-    let id, name, operation: String?
-    let score: Int?
+    public let id, name, operation: String?
+    public let score: Int?
 }
 
 // MARK: - Error
 public struct Error: Codable {
-    let message : String?
+    public let message : String?
 }
 
 // MARK: - Encode/decode helpers

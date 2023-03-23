@@ -9,21 +9,21 @@ import Foundation
 
 public struct ErrorBase: Codable {
     public let user: ErrorData?
-    let jwtError : JWTError?
+    public let jwtError : JWTError?
 }
 
 // MARK: - ErrorUser
 public struct ErrorData: Codable {
-    let title: String?
-    let status: Int?
+    public let title: String?
+    public let status: Int?
     public let detail: String?
 }
 public struct JWTError: Codable {
-    let bdy: Bdy?
+    public let bdy: Bdy?
 }
 
 // MARK: - Bdy
 public struct JWTBdy: Codable {
-    let type, title, status, detail: String?
-    let instance: String?
+    public let type, title, status, detail: String?
+    public let instance: String?
 }

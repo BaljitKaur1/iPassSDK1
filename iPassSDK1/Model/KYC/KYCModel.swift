@@ -14,10 +14,10 @@ import Foundation
 
 // MARK: - KYCError
 public struct KYCModel: Codable {
-    let status: Bool?
-    let message: String?
-    let error: KYCError?
-    let data: KYCDataClass?
+    public let status: Bool?
+    public let message: String?
+    public let error: KYCError?
+    public let data: KYCDataClass?
     //let data: DataClass
 }
 
@@ -28,60 +28,60 @@ public struct KYCDataClass: Codable {
 
 // MARK: - Error
 public struct KYCError: Codable {
-    let bdy: KYCBdy?
-    let user :  ErrorData?
+    public let bdy: KYCBdy?
+    public let user :  ErrorData?
     //let user: KYCErrorUserDetail?
 }
 
 // MARK: - User
 public struct KYCErrorUserDetail: Codable {
-    let title: String?
-    let status: Int?
-    let detail: String?
+    public let title: String?
+    public let status: Int?
+    public let detail: String?
 }
 
 
 // MARK: - Bdy
 public struct KYCBdy: Codable {
-    let type, title: String?
-    let status: String?
-    let detail: String?
-    let instance: String?
+    public let type, title: String?
+    public let status: String?
+    public let detail: String?
+    public let instance: String?
 }
 
 // MARK: - Bdy
 public struct KYCDataBdy: Codable {
-    let timestamp: String?
-    let account: KYCDatAccount?
-    let workflowExecution: KYCDatWorkflowExecution?
+    public let timestamp: String?
+    public let account: KYCDatAccount?
+    public let workflowExecution: KYCDatWorkflowExecution?
 }
 
 // MARK: - Account
 public struct KYCDatAccount: Codable {
-    let id: String?
+    public let id: String?
 }
 
 // MARK: - WorkflowExecution
 public struct KYCDatWorkflowExecution: Codable {
-    let id: String?
-    let credentials: [KYCDatCredential]?
+    public let id: String?
+    public let credentials: [KYCDatCredential]?
 }
 
 // MARK: - Credential
 public struct KYCDatCredential: Codable {
-    let id, category: String?
-    let allowedChannels: [String]?
-    let api: KYCDatAPI?
+    public let id, category: String?
+    public let allowedChannels: [String]?
+    public let api: KYCDatAPI?
 }
 
 // MARK: - API
 public struct KYCDatAPI: Codable {
-    let token: String?
-    let parts: KYCDatParts?
-    let workflowExecution: String?
+    public let token: String?
+    public let parts: KYCDatParts?
+    public let workflowExecution: String?
 }
 
 // MARK: - Parts
 public struct KYCDatParts: Codable {
-    let prepared_data: String?
+    public let prepared_data: String?
 }

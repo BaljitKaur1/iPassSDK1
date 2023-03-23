@@ -7,33 +7,33 @@ import Foundation
 
 // MARK: - PassPostModel
 public struct PassPostModel: Codable {
-    let status: Bool?
-    let message: String?
-    let data: PassDataClass?
-    let error: ErrorBase?
+    public let status: Bool?
+    public let message: String?
+    public let data: PassDataClass?
+    public let error: ErrorBase?
 }
 
 // MARK: - DataClass
 public struct PassDataClass: Codable {
-    let resp: Resp
+    public let resp: Resp
 }
 public struct PassportError: Codable {
-    let bdy: PassportBdy?
-    let userError : UserStatusParse?
+    public let bdy: PassportBdy?
+    public let userError : UserStatusParse?
 }
 
 // MARK: - Bdy
 public struct PassportBdy: Codable {
-    let type, title, status, detail: String?
-    let instance: String?
+    public let type, title, status, detail: String?
+    public let instance: String?
 }
 
 // MARK: - Resp
 public struct Resp: Codable {
-    let contentLength: String
-    let operationLocation: String
-    let xEnvoyUpstreamServiceTime, apimRequestID, strictTransportSecurity, xContentTypeOptions: String
-    let xMSRegion, date, connection: String
+    public let contentLength: String
+    public let operationLocation: String
+    public let xEnvoyUpstreamServiceTime, apimRequestID, strictTransportSecurity, xContentTypeOptions: String
+    public let xMSRegion, date, connection: String
 
     enum CodingKeys: String, CodingKey {
         case contentLength = "content-length"

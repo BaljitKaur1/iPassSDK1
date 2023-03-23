@@ -7,22 +7,22 @@ import Foundation
 
 // MARK: - DrivingPostModel
 public struct DrivingPostModel: Codable {
-    let status: Bool?
-    let message: String?
-    let data: DPDataClass?
+    public let status: Bool?
+    public let message: String?
+    public let data: DPDataClass?
 }
 
 // MARK: - DataClass
 public struct DPDataClass: Codable {
-    let resp: DPResp?
+    public let resp: DPResp?
 }
 
 // MARK: - Resp
 public struct DPResp: Codable {
-    let contentLength: String
-    let operationLocation: String
-    let xEnvoyUpstreamServiceTime, apimRequestID, strictTransportSecurity, xContentTypeOptions: String
-    let xMSRegion, date, connection: String
+    public let contentLength: String
+    public let operationLocation: String
+    public let xEnvoyUpstreamServiceTime, apimRequestID, strictTransportSecurity, xContentTypeOptions: String
+    public let xMSRegion, date, connection: String
 
     enum CodingKeys: String, CodingKey {
         case contentLength = "content-length"

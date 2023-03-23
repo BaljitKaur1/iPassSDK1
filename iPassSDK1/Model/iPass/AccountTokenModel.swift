@@ -7,39 +7,39 @@ import Foundation
 
 // MARK: - AccountTokenModel
 public struct AccountTokenModel: Codable {
-    let status: Bool?
-    let message: String?
-    let data: AccountTokenData?
-    let error: ErrorBase?
+    public let status: Bool?
+    public let message: String?
+    public let data: AccountTokenData?
+    public let error: ErrorBase?
 }
 
 // MARK: - DataClass
 public struct AccountTokenData: Codable {
-    let accdata: Accdata?
+    public let accdata: Accdata?
 }
 
 // MARK: - Accdata
 public struct Accdata: Codable {
-    let timestamp: String?
-    let account: Account?
-    let web: Web?
-    let sdk: SDK?
-    let workflowExecution: WorkflowExecution?
+    public let timestamp: String?
+    public let account: Account?
+    public let web: Web?
+    public let sdk: SDK?
+    public let workflowExecution: WorkflowExecution?
 }
 
 // MARK: - Account
 public struct Account: Codable {
-    let id: String?
+    public let id: String?
 }
 
 // MARK: - SDK
 public struct SDK: Codable {
-    let token: String?
+    public let token: String?
 }
 
 // MARK: - Web
 public struct Web: Codable {
-    let href, successURL, errorURL: String?
+    public let href, successURL, errorURL: String?
 
     enum CodingKeys: String, CodingKey {
         case href
@@ -50,25 +50,25 @@ public struct Web: Codable {
 
 // MARK: - WorkflowExecution
 public struct WorkflowExecution: Codable {
-    let id: String
-    let credentials: [Credential]
+    public let id: String
+    public let credentials: [Credential]
 }
 
 // MARK: - Credential
 public struct Credential: Codable {
-    let id, category: String
-    let allowedChannels: [String]
-    let api: API?
+    public let id, category: String
+    public let allowedChannels: [String]
+    public let api: API?
 }
 
 // MARK: - API
 public struct API: Codable {
-    let token: String
-    let parts: Parts
-    let workflowExecution: String
+    public let token: String
+    public let parts: Parts
+    public let workflowExecution: String
 }
 
 // MARK: - Parts
 public struct Parts: Codable {
-    let front, back, face: String?
+    public let front, back, face: String?
 }

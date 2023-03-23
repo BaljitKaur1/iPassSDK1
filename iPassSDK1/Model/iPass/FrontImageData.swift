@@ -2,27 +2,27 @@ import Foundation
 
 // MARK: - GETIDCardFrontModel
 public struct FrontImageData: Codable {
-    let status: Bool?
-    let message: String?
-    let error: Error111?
-    let data : imageDataClass?
+    public let status: Bool?
+    public let message: String?
+    public let error: Error111?
+    public let data : imageDataClass?
 }
 public struct imageDataClass: Codable {
-    let img: String
+    public let img: String
 }
 // MARK: - Error
 public struct Error111: Codable {
-    let parseBody: ParseBody111?
-    let user : ParseUser?
+    public let parseBody: ParseBody111?
+    public let user : ParseUser?
 }
 public struct ParseUser: Codable {
-    let itle: String?
-    let status: Int?
-    let detail: String?
+    public let itle: String?
+    public let status: Int?
+    public let detail: String?
 }
 // MARK: - ParseBody
 public struct ParseBody111: Codable {
-    let type, title: String?
-    let status: Int?
-    let detail: String?
+    public let type, title: String?
+    public let status: Int?
+    public let detail: String?
 }

@@ -8,23 +8,23 @@
 import Foundation
 // MARK: - JWTToken
 public struct JWTToken: Codable {
-    let status: Bool?
-    let message: String?
-    let data: DataClass?
-    let error: ErrorBase?
+    public let status: Bool?
+    public let message: String?
+    public let data: DataClass?
+    public let error: ErrorBase?
 }
 
 // MARK: - DataClass
 public struct DataClass: Codable {
-    let user: User?
+    public let user: User?
 }
 
 // MARK: - User
 public struct User: Codable {
-    let firstName, lastName, email, password: String?
-    let id: String?
-    let v: Int?
-    let token: String?
+    public let firstName, lastName, email, password: String?
+    public let id: String?
+    public let v: Int?
+    public let token: String?
     
     enum CodingKeys: String, CodingKey {
         case firstName = "first_name"

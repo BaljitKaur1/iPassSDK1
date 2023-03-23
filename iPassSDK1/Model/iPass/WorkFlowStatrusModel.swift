@@ -9,56 +9,56 @@ import Foundation
 //
 // MARK: - WorkFlowStatrusModel
 public struct WorkFlowStatusModel: Codable {
-    let status: Bool?
-    let message: String?
-    let error: WorkFlowStatusError?
-    let data: WorkFlowDataClass?
+    public let status: Bool?
+    public let message: String?
+    public let error: WorkFlowStatusError?
+    public let data: WorkFlowDataClass?
 }
 
 // MARK: - Error
 public struct WorkFlowStatusError: Codable {
-    let statusParse: WorkFlowStatusParse?
-    let user: WorkflowDataUser?
-    let bdy: WorkflowDataBdyError?
+    public let statusParse: WorkFlowStatusParse?
+    public let user: WorkflowDataUser?
+    public let bdy: WorkflowDataBdyError?
 }
 
 // MARK: - DataClass
 public struct WorkFlowDataClass: Codable {
-    let statusParse: WorkFlowStatusDataParse?
+    public let statusParse: WorkFlowStatusDataParse?
 }
 public struct WorkflowDataBdyError: Codable{
-    let type, title: String?
-    let status: Int?
-    let detail,instance: String?
+    public let type, title: String?
+    public let status: Int?
+    public let detail,instance: String?
 }
 // MARK: - StatusParse
 public struct WorkFlowStatusParse: Codable {
-    let type, title: String?
-    let status: Int?
-    let detail: String?
+    public let type, title: String?
+    public let status: Int?
+    public let detail: String?
 }
 
 // MARK: - StatusParse
 public struct WorkFlowStatusDataParse: Codable {
-    let account: WorkFlowAccount?
-    let workflowExecution: WorkflowDataExecution?
+    public let account: WorkFlowAccount?
+    public let workflowExecution: WorkflowDataExecution?
 }
 
 // MARK: - Account
 public struct WorkFlowAccount: Codable {
-    let id: String?
-    let href: String?
+    public let id: String?
+    public let href: String?
 }
 
 public struct WorkflowDataExecution: Codable {
-    let id: String?
-    let href: String?
-    let definitionKey, status: String?
+    public let id: String?
+    public let href: String?
+    public let definitionKey, status: String?
 }
 
 // MARK: - User
 public struct WorkflowDataUser: Codable {
-    let title: String?
-    let status: Int?
-    let detail: String?
+    public let title: String?
+    public let status: Int?
+    public let detail: String?
 }

@@ -9,17 +9,17 @@ import Foundation
 
 // MARK: - UserStatusError
 public struct UserStatusError: Codable {
-    let uerror: UserError?
+    public let uerror: UserError?
 }
 
 // MARK: - Error
 public struct UserError: Codable {
-    let ustatusParse: UserStatusParse?
+    public let ustatusParse: UserStatusParse?
 }
 
 // MARK: - StatusParse
 public struct UserStatusParse: Codable {
-    let type, title: String?
-    let status: Int?
-    let detail: String?
+    public let type, title: String?
+    public let status: Int?
+    public let detail: String?
 }
