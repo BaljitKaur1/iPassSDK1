@@ -57,6 +57,7 @@
 		40D2A54229CB0AD400339E92 /* FrontImageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontImageData.swift; sourceTree = "<group>"; };
 		40D2A54329CB0AD400339E92 /* AccountTokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTokenModel.swift; sourceTree = "<group>"; };
 		40D2A54429CB0AD400339E92 /* WorkFlowStatrusModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkFlowStatrusModel.swift; sourceTree = "<group>"; };
+		40D2A54E29CB4E9F00339E92 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A936CC461C5FDB443643004 /* Pods-iPassSDK1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassSDK1.debug.xcconfig"; path = "Target Support Files/Pods-iPassSDK1/Pods-iPassSDK1.debug.xcconfig"; sourceTree = "<group>"; };
 		7579017B2993E975005DC220 /* Apis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apis.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,6 +189,7 @@
 		F0F45FD86F800AB86ACA2991 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40D2A54E29CB4E9F00339E92 /* Alamofire.framework */,
 				1EA996C16DDC21E9F7855919 /* Pods_iPassSDK1.framework */,
 			);
 			name = Frameworks;
