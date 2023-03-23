@@ -304,5 +304,81 @@ open class Apis: NSObject {
             completion(response)
         }
     }
+    
+    // MARK: - KYC -
+    
+    // MARK: - KYC Initiate Account Api
+    open func kYCInitialiseAccountApi(token:String,jwtToken: String,accountId:String,customerInternalReference:Int,workflowDefinition: [String:Any], completion :@escaping(_ : KYCInitateModel?,_ : KYCInitateError?) -> Void){
+        
+        let baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpointWithoutIpass.rawValue + KYCEndpoints.initKYCAccount.rawValue +  token + "&accountId=\(accountId)"
+        let params: [String: Any] = ["customerInternalReference": customerInternalReference, "workflowDefinition": workflowDefinition]
+        let headers: HTTPHeaders = ["Content-Type": "application/json","Accept": "application/json","Authorization":jwtToken]
+        ApiStore.shared.baseRequestApi(baseUrl,.put,params,headers.dictionary) { (result: KYCInitateModel? ) in
+            if result?.message == "Fail" {
+                // print(result?.error)
+                completion(nil,(result?.error)!)
+            } else if result?.message == "Success" {
+                
+                completion(result, nil)
+            }
+        }
+    }
+    
+    // MARK: - KYC Prepare Data
+    open func kycPrepareData(token:String,authToken:String,accountId:String,workflowExecutionId: String,credentialId: String,firstName:String,lastName: String,dateOfBirth: String,completion : @escaping(_:KYCPrePareData?,_ :KYCPrePareError?  ) -> Void){
+        let baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpointWithoutIpass.rawValue + KYCEndpoints.kycPrepareData.rawValue +  token + "&accountId=\(accountId)" + "&workflowExecutionId=\(workflowExecutionId)" + "&credentialId=\(credentialId)"
+        let headers: HTTPHeaders = ["Content-Type": "application/json","Accept": "application/json","Authorization":authToken]
+        let params: [String: String] = ["firstName": firstName, "lastName": dateOfBirth, "dateOfBirth": dateOfBirth]
+        ApiStore.shared.baseRequestApi(baseUrl, .post,params,headers.dictionary) { (result : KYCPrePareData?) in
+            if result?.message == "Fail"{
+                print("Error----",result?.error as Any)
+                completion(nil,result?.error)
+            } else if (result?.message == "Success"){
+                completion(result,nil)
+            }
+        }
+    }
+    
+    // MARK: - KYC Put Prepare Data
+    open func kycPutPrepareData(token:String,authToken:String,accountId:String,workflowExecutionId: String,firstName:String,lastName: String,dateOfBirth: String,completion : @escaping(_:KYCPUTPrePareData?,_ :KYCPUTPrePareError?  ) -> Void){
+        let baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpointWithoutIpass.rawValue + KYCEndpoints.kycPUTPrepareData.rawValue +  token + "&accountId=\(accountId)" + "&workflowExecutionId=\(workflowExecutionId)"
+        let headers: HTTPHeaders = ["Content-Type": "application/json","Accept": "application/json","Authorization":authToken]
+        ApiStore.shared.baseRequestApi(baseUrl, .put,nil,headers.dictionary) { (result : KYCPUTPrePareData?) in
+            if result?.message == "Fail"{
+                print("Error----",result?.error as Any)
+                completion(nil,result?.error)
+            } else if (result?.message == "Success"){
+                completion(result,nil)
+            }
+        }
+    }
+    
+    // MARK: - KYC Workflow Status
+    open func kycWorkflowStatus(token:String,authToken:String,accountId:String,workflowExecutionId: String,firstName:String,lastName: String,dateOfBirth: String,completion : @escaping(_:KYCWorkflowStatusModel?,_ :KYCWorkflowStatusError?  ) -> Void){
+        let baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpointWithoutIpass.rawValue + KYCEndpoints.kycWorkFlowStatus.rawValue +  token + "&accountId=\(accountId)" + "&workflowExecutionId=\(workflowExecutionId)"
+        let headers: HTTPHeaders = ["Content-Type": "application/json","Accept": "application/json","Authorization":authToken]
+        ApiStore.shared.baseRequestApi(baseUrl, .get,nil,headers.dictionary) { (result : KYCWorkflowStatusModel?) in
+            if result?.message == "Fail"{
+                print("Error----",result?.error as Any)
+                completion(nil,result?.error)
+            } else if (result?.message == "Success"){
+                completion(result,nil)
+            }
+        }
+    }
+    
+    // MARK: - KYC User Detail
+    open func kycUserDetail(token:String,authToken:String,accountId:String,workflowExecutionId: String,firstName:String,lastName: String,dateOfBirth: String,completion : @escaping(_:KYCUserDetailModel?,_ :KYCUserDetailError?  ) -> Void){
+        let baseUrl = BaseUrl.baseUrl.rawValue + VersionEndpoint.userEndpointWithoutIpass.rawValue + KYCEndpoints.kycUserDetail.rawValue +  token + "&accountId=\(accountId)" + "&workflowExecutionId=\(workflowExecutionId)"
+        let headers: HTTPHeaders = ["Content-Type": "application/json","Accept": "application/json","Authorization":authToken]
+        ApiStore.shared.baseRequestApi(baseUrl, .get,nil,headers.dictionary) { (result : KYCUserDetailModel?) in
+            if result?.message == "Fail"{
+                print("Error----",result?.error as Any)
+                completion(nil,result?.error)
+            } else if (result?.message == "Success"){
+                completion(result,nil)
+            }
+        }
+    }
 }
 

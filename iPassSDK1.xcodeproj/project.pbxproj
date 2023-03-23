@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1C98B28D3290193FF1A90F61 /* Pods_iPassSDK1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA996C16DDC21E9F7855919 /* Pods_iPassSDK1.framework */; };
 		4092968129927371000C3F1B /* iPassSDK1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4092968029927371000C3F1B /* iPassSDK1.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40A48FA629CC901A00D090CE /* KYCInitateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A48FA529CC901A00D090CE /* KYCInitateModel.swift */; };
+		40A48FA829CC94EF00D090CE /* KYCWorkflowStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A48FA729CC94EF00D090CE /* KYCWorkflowStatusModel.swift */; };
+		40A48FAA29CC968B00D090CE /* KYCUserDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A48FA929CC968B00D090CE /* KYCUserDetailModel.swift */; };
 		40D2A52329CB085E00339E92 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52029CB085E00339E92 /* WebServices.swift */; };
 		40D2A52429CB085E00339E92 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52129CB085E00339E92 /* Reachability.swift */; };
 		40D2A52529CB085E00339E92 /* ApiStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2A52229CB085E00339E92 /* ApiStore.swift */; };
@@ -38,6 +41,9 @@
 		400F2E1D29CC371F00BBB2A6 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4092967D29927371000C3F1B /* iPassSDK1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPassSDK1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4092968029927371000C3F1B /* iPassSDK1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPassSDK1.h; sourceTree = "<group>"; };
+		40A48FA529CC901A00D090CE /* KYCInitateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCInitateModel.swift; sourceTree = "<group>"; };
+		40A48FA729CC94EF00D090CE /* KYCWorkflowStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCWorkflowStatusModel.swift; sourceTree = "<group>"; };
+		40A48FA929CC968B00D090CE /* KYCUserDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCUserDetailModel.swift; sourceTree = "<group>"; };
 		40D2A52029CB085E00339E92 /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		40D2A52129CB085E00339E92 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		40D2A52229CB085E00339E92 /* ApiStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiStore.swift; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 				40D2A52A29CB08BE00339E92 /* KYCModel.swift */,
 				40D2A52D29CB08BE00339E92 /* KYCPrePareDataModel.swift */,
 				40D2A52C29CB08BE00339E92 /* KYCPUTPrepareData.swift */,
+				40A48FA529CC901A00D090CE /* KYCInitateModel.swift */,
+				40A48FA729CC94EF00D090CE /* KYCWorkflowStatusModel.swift */,
+				40A48FA929CC968B00D090CE /* KYCUserDetailModel.swift */,
 			);
 			path = KYC;
 			sourceTree = "<group>";
@@ -302,9 +311,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				40D2A54A29CB0AD400339E92 /* FrontImageData.swift in Sources */,
+				40A48FA829CC94EF00D090CE /* KYCWorkflowStatusModel.swift in Sources */,
 				40D2A52529CB085E00339E92 /* ApiStore.swift in Sources */,
 				40D2A52F29CB08BE00339E92 /* ErrorBase.swift in Sources */,
 				40D2A53629CB08DD00339E92 /* PassPostModel.swift in Sources */,
+				40A48FAA29CC968B00D090CE /* KYCUserDetailModel.swift in Sources */,
 				40D2A52E29CB08BE00339E92 /* KYCModel.swift in Sources */,
 				40D2A52329CB085E00339E92 /* WebServices.swift in Sources */,
 				7579017C2993E975005DC220 /* Apis.swift in Sources */,
@@ -315,6 +326,7 @@
 				40D2A54529CB0AD400339E92 /* DeleteAccountDataModel.swift in Sources */,
 				40D2A54C29CB0AD400339E92 /* WorkFlowStatrusModel.swift in Sources */,
 				40D2A54829CB0AD400339E92 /* UserStatusError.swift in Sources */,
+				40A48FA629CC901A00D090CE /* KYCInitateModel.swift in Sources */,
 				40D2A53129CB08BE00339E92 /* KYCPrePareDataModel.swift in Sources */,
 				40D2A54929CB0AD400339E92 /* UserDetailError.swift in Sources */,
 				40D2A53729CB08DD00339E92 /* DrivingPostModel.swift in Sources */,
