@@ -7,7 +7,7 @@
 
 import Foundation
 // MARK: - JWTToken
-struct JWTToken: Codable {
+public struct JWTToken: Codable {
     let status: Bool?
     let message: String?
     let data: DataClass?
@@ -15,12 +15,12 @@ struct JWTToken: Codable {
 }
 
 // MARK: - DataClass
-struct DataClass: Codable {
+public struct DataClass: Codable {
     let user: User?
 }
 
 // MARK: - User
-struct User: Codable {
+public struct User: Codable {
     let firstName, lastName, email, password: String?
     let id: String?
     let v: Int?

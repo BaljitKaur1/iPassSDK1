@@ -33,7 +33,7 @@ open class Apis: NSObject {
     
     
     // Mark: - 1 .
-    func initJWTToken(first_name: String,last_name:String,password:String,email:String,token:String, completion: @escaping(_ : JWTToken? , ErrorBase?) -> Void) {
+    open func initJWTToken(first_name: String,last_name:String,password:String,email:String,token:String, completion: @escaping(_ : JWTToken? , ErrorBase?) -> Void) {
         let params : [String: String] = [
             "first_name" : first_name,
             "last_name" : last_name,
@@ -300,7 +300,7 @@ open class Apis: NSObject {
         }
         
         ////Mark :-18-23  Uploaded Document Data
-        func getDataOfType(token:String,jwtToken:String,apimId:String,documentType:String ,completion : @escaping(_ : [String : Any]?)->Void){ 
+        func getDataOfType(token:String,jwtToken:String,apimId:String,documentType:String ,completion : @escaping(_ : [String : Any]?)->Void){
             
             switch(documentType){
             case "Passport":
